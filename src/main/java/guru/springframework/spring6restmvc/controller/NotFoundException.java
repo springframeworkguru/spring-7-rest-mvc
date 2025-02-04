@@ -3,9 +3,12 @@ package guru.springframework.spring6restmvc.controller;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
+<<<<<<< Updated upstream
 /**
  * Created by jt, Spring Framework Guru.
  */
+=======
+>>>>>>> Stashed changes
 @ResponseStatus(value = HttpStatus.NOT_FOUND, reason = "Value Not Found")
 public class NotFoundException extends RuntimeException {
     public NotFoundException() {
@@ -26,4 +29,8 @@ public class NotFoundException extends RuntimeException {
     public NotFoundException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

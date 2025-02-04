@@ -16,7 +16,11 @@ class CustomerRepositoryTest {
     @Test
     void testSaveCustomer() {
         Customer customer = customerRepository.save(Customer.builder()
+<<<<<<< Updated upstream
                         .name("New Name")
+=======
+                .name("New Name")
+>>>>>>> Stashed changes
                 .build());
 
         assertThat(customer.getId()).isNotNull();

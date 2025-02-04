@@ -19,6 +19,24 @@ class BeerRepositoryTest {
     BeerRepository beerRepository;
 
     @Test
+<<<<<<< Updated upstream
+=======
+    void testSaveBeer() {
+        Beer savedBeer = beerRepository.save(Beer.builder()
+                .beerName("My Beer")
+                .beerStyle(BeerStyle.PALE_ALE)
+                .upc("234234234234")
+                .price(new BigDecimal("11.99"))
+                .build());
+
+        beerRepository.flush();
+
+        assertThat(savedBeer).isNotNull();
+        assertThat(savedBeer.getId()).isNotNull();
+    }
+
+    @Test
+>>>>>>> Stashed changes
     void testSaveBeerNameTooLong() {
 
         assertThrows(ConstraintViolationException.class, () -> {
@@ -32,6 +50,7 @@ class BeerRepositoryTest {
             beerRepository.flush();
         });
     }
+<<<<<<< Updated upstream
 
     @Test
     void testSaveBeer() {
@@ -47,4 +66,6 @@ class BeerRepositoryTest {
         assertThat(savedBeer).isNotNull();
         assertThat(savedBeer.getId()).isNotNull();
     }
+=======
+>>>>>>> Stashed changes
 }

@@ -13,9 +13,12 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.Arrays;
 
+<<<<<<< Updated upstream
 /**
  * Created by jt, Spring Framework Guru.
  */
+=======
+>>>>>>> Stashed changes
 @Component
 @RequiredArgsConstructor
 public class BootstrapData implements CommandLineRunner {
@@ -73,6 +76,10 @@ public class BootstrapData implements CommandLineRunner {
             Customer customer1 = Customer.builder()
                     .name("Customer 1")
                     .version(1)
+<<<<<<< Updated upstream
+=======
+                    .email("customer_1@gmail.com")
+>>>>>>> Stashed changes
                     .createdDate(LocalDateTime.now())
                     .updateDate(LocalDateTime.now())
                     .build();
@@ -80,6 +87,10 @@ public class BootstrapData implements CommandLineRunner {
             Customer customer2 = Customer.builder()
                     .name("Customer 2")
                     .version(1)
+<<<<<<< Updated upstream
+=======
+                    .email("customer_2@gmail.com")
+>>>>>>> Stashed changes
                     .createdDate(LocalDateTime.now())
                     .updateDate(LocalDateTime.now())
                     .build();
@@ -87,14 +98,23 @@ public class BootstrapData implements CommandLineRunner {
             Customer customer3 = Customer.builder()
                     .name("Customer 3")
                     .version(1)
+<<<<<<< Updated upstream
+=======
+                    .email("customer_3@gmail.com")
+>>>>>>> Stashed changes
                     .createdDate(LocalDateTime.now())
                     .updateDate(LocalDateTime.now())
                     .build();
 
             customerRepository.saveAll(Arrays.asList(customer1, customer2, customer3));
         }
+<<<<<<< Updated upstream
 
     }
 
 
 }
+=======
+    }
+}
+>>>>>>> Stashed changes

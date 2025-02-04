@@ -14,9 +14,12 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+<<<<<<< Updated upstream
 /**
  * Created by jt, Spring Framework Guru.
  */
+=======
+>>>>>>> Stashed changes
 @Getter
 @Setter
 @Builder
@@ -28,7 +31,11 @@ public class Beer {
     @Id
     @GeneratedValue(generator = "UUID")
     @UuidGenerator
+<<<<<<< Updated upstream
     @Column(length = 36, columnDefinition = "varchar", updatable = false, nullable = false)
+=======
+    @Column(length = 36, columnDefinition = "varchar(36)", updatable = false, nullable = false)
+>>>>>>> Stashed changes
     @JdbcTypeCode(SqlTypes.CHAR)
     private UUID id;
 
@@ -42,17 +49,31 @@ public class Beer {
     private String beerName;
 
     @NotNull
+<<<<<<< Updated upstream
     @JdbcTypeCode(value = SqlTypes.SMALLINT)
+=======
+>>>>>>> Stashed changes
     private BeerStyle beerStyle;
 
     @NotNull
     @NotBlank
     @Size(max = 255)
     private String upc;
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
     private Integer quantityOnHand;
 
     @NotNull
     private BigDecimal price;
+<<<<<<< Updated upstream
     private LocalDateTime createdDate;
     private LocalDateTime updateDate;
 }
+=======
+
+    private LocalDateTime createdDate;
+    private LocalDateTime updateDate;
+}
+>>>>>>> Stashed changes

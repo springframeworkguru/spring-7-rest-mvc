@@ -37,6 +37,10 @@
         <dependency>
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
+<<<<<<< Updated upstream
+=======
+            <version>8.2.0</version>
+>>>>>>> Stashed changes
             <scope>runtime</scope>
         </dependency>
         <dependency>
