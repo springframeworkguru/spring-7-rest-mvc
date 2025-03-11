@@ -13,22 +13,23 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.Arrays;
 
+/**
+ * Created by jt, Spring Framework Guru.
+ */
 @Component
 @RequiredArgsConstructor
 public class BootstrapData implements CommandLineRunner {
-
     private final BeerRepository beerRepository;
     private final CustomerRepository customerRepository;
-    
+
     @Override
     public void run(String... args) throws Exception {
         loadBeerData();
         loadCustomerData();
-        System.out.println("✅ CommandLineRunner.run() đã chạy!");
     }
 
     private void loadBeerData() {
-        if (beerRepository.count() == 0) {
+        if (beerRepository.count() == 0){
             Beer beer1 = Beer.builder()
                     .beerName("Galaxy Cat")
                     .beerStyle(BeerStyle.PALE_ALE)
@@ -63,9 +64,11 @@ public class BootstrapData implements CommandLineRunner {
             beerRepository.save(beer2);
             beerRepository.save(beer3);
         }
+
     }
 
     private void loadCustomerData() {
+
         if (customerRepository.count() == 0) {
             Customer customer1 = Customer.builder()
                     .name("Customer 1")
@@ -90,5 +93,8 @@ public class BootstrapData implements CommandLineRunner {
 
             customerRepository.saveAll(Arrays.asList(customer1, customer2, customer3));
         }
+
     }
+
+
 }

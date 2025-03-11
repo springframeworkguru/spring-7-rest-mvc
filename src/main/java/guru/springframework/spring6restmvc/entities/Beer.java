@@ -7,17 +7,20 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.*;
 import org.hibernate.annotations.UuidGenerator;
-import org.hibernate.validator.constraints.Length;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-@Data
+/**
+ * Created by jt, Spring Framework Guru.
+ */
+@Getter
+@Setter
 @Builder
 @Entity
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 public class Beer {
 
     @Id
@@ -29,8 +32,8 @@ public class Beer {
     @Version
     private Integer version;
 
-    @NotBlank
     @NotNull
+    @NotBlank
     @Size(max = 50)
     @Column(length = 50)
     private String beerName;
@@ -40,6 +43,7 @@ public class Beer {
 
     @NotNull
     @NotBlank
+    @Size(max = 255)
     private String upc;
     private Integer quantityOnHand;
 

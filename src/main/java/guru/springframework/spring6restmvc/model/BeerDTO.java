@@ -1,6 +1,5 @@
 package guru.springframework.spring6restmvc.model;
 
-import guru.springframework.spring6restmvc.services.BeerService;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.Builder;
@@ -19,8 +18,8 @@ public class BeerDTO {
     private UUID id;
     private Integer version;
 
-    @NotNull
     @NotBlank
+    @NotNull
     private String beerName;
 
     @NotNull
@@ -29,9 +28,9 @@ public class BeerDTO {
     @NotNull
     @NotBlank
     private String upc;
+    private Integer quantityOnHand;
 
     @NotNull
-    private Integer quantityOnHand;
     private BigDecimal price;
     private LocalDateTime createdDate;
     private LocalDateTime updateDate;

@@ -26,10 +26,15 @@ class BootstrapDataTest {
     }
 
     @Test
-    void testRun() throws Exception {
-        bootstrapData.run((String) null);
+    void Testrun() throws Exception {
+        bootstrapData.run(null);
 
         assertThat(beerRepository.count()).isEqualTo(3);
         assertThat(customerRepository.count()).isEqualTo(3);
     }
 }
+
+
+
+
+
